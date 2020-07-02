@@ -1,0 +1,36 @@
+/**
+Write a function that reverses a string. The input string is given as an array of characters char[].
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+You may assume all the characters consist of printable ascii characters.
+
+*/
+
+public class ReverseInteger {
+
+	public static void main(String[] args) {
+		int x = 0;
+		System.out.println(reverse(x));
+	}
+
+	public static int reverse(int x) {
+		if (x > Math.pow(x, 32)) {
+			return 0;
+		}
+
+		StringBuilder num = new StringBuilder(String.valueOf(x));
+		num = num.reverse();
+		if (x < 0) {
+			num.insert(0, '-');
+			num.replace(num.length() - 1, num.length(), "");
+		}
+		try {
+			int res = Integer.parseInt(num.toString());
+			return res;
+		} catch (Exception e) {
+			return 0;
+		}
+
+	}
+}

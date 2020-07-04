@@ -1,0 +1,29 @@
+package io.test.LinkedLists;
+
+public class DeleteNodeinaLinkedList {
+
+	public static void main(String[] args) {
+		ListNode root = new ListNode(2);
+		ListNode one = new ListNode(3);
+		root.next = one;
+		ListNode two = new ListNode(5);
+		one.next = two;
+		ListNode three = new ListNode(9);
+		two.next = three;
+		printList(root);
+		deleteNode(two);
+		printList(root);
+	}
+
+	private static void printList(ListNode root) {
+		while (root != null) {
+			System.out.println(root.val);
+			root = root.next;
+		}
+	}
+
+	public static void deleteNode(ListNode node) {
+		node.val = node.next.val;
+		node.next = node.next.next;
+	}
+}

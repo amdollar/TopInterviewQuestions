@@ -1,0 +1,26 @@
+
+public class BTreeDepth {
+	/**
+	 * 
+	 * write a program to find the depth of a given binary tree
+	 */
+
+	public static void main(String[] args) {
+		TreeNode root = new TreeNode(3);
+		root.leftNode = new TreeNode(9);
+		root.rightNode = new TreeNode(20);
+		root.rightNode.leftNode = new TreeNode(15);
+		root.rightNode.rightNode = new TreeNode(7);
+		int maxdepth = maxDepth(root);
+		System.out.println(maxdepth);
+	}
+
+	public static int maxDepth(TreeNode root) {
+		if (root == null)
+			return 0;
+		int left = maxDepth(root.leftNode);
+		int right = maxDepth(root.rightNode);
+
+		return Math.max(left, right) + 1;
+	}
+}

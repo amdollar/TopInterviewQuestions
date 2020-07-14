@@ -2,7 +2,7 @@
 public class BTreeDepth {
 	/**
 	 * 
-	 * write a program to find the depth of a given binary tree
+	 * write a program to find the depth of a given binary tree  
 	 */
 
 	public static void main(String[] args) {

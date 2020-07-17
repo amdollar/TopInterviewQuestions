@@ -32,6 +32,7 @@ public class MergeLists {
 			if (l1 != null) {
 				curr1 = l1.val;
 			}
+			
 			if (l2 != null) {
 				cur2 = l2.val;
 			}

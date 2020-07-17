@@ -3,13 +3,13 @@ package io.test.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class IntersectionofTwoArrays {
+public class IntersectionofTwoArrays { 
 
 	public static void main(String[] args) {
 		int[] ar1 = new int[] { 4, 9, 5 };
 		int[] ar2 = new int[] { 9, 4, 9, 8, 4 };
 		int res[] = intersect(ar1, ar2);
-		for (int i : res)
+		for (int i : res) 
 			System.out.print(i + " ");
 	}
 
@@ -22,7 +22,7 @@ public class IntersectionofTwoArrays {
 			else
 				map.put(nums1[i], 1);
 		}
-
+ 
 		for (int i = 0; i < nums2.length; i++) {
 			if (map.containsKey(nums2[i]) && map.get(nums2[i]) > 0) {
 				result.add(nums2[i]);

@@ -8,12 +8,12 @@ You may assume all the characters consist of printable ascii characters.
 */
 
 public class ReverseInteger {
-
+ 
 	public static void main(String[] args) {
 		int x = 0;
 		System.out.println(reverse(x));
 	}
-
+ 
 	public static int reverse(int x) {
 		if (x > Math.pow(x, 32)) {
 			return 0;
